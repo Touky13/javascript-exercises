@@ -1,9 +1,8 @@
-const removeFromArray = function(array, spliceElem) {
+const removeFromArray = function(array, ...args) {
 
-    const splicedArray = array.toSpliced(spliceElem - 1, 1);
+    const splicedArray = array.filter(x => !args.includes(x));
 
     return splicedArray;
-
 };
 
 // Do not edit below this line
